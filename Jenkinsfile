@@ -16,8 +16,11 @@ pipeline {
 
         stage('Push') {
             steps {
-                sh 'docker tag flask-app dejourford/flask-app:latest'
-                sh 'docker push dejourford/flask-app:latest'
+                withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                    sh 'docker login -u $USERNAME -p $PASSWORD'
+                    sh 'docker tag flask-app dejourford/flask-app:latest'
+                    sh 'docker push dejourford/flask-app:latest'
+                }
             }
         }
 
