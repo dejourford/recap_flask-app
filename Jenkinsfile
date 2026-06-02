@@ -29,7 +29,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh "kubectl set image deployment/flask-deployment flask=${IMAGE_TAG} --validate=false"
+                sh "kubectl set image deployment/flask-deployment flask=${IMAGE_TAG}"
             }
         }
     }
