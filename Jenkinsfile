@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    
+    environment {
+        IMAGE_TAG = "dejourford/flask-app:${BUILD_NUMBER}"
+    }
 
     stages {
         stage('Clone') {
@@ -10,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'docker build -t flask-app .'
+                sh "docker build -t ${IMAGE_TAG} ."
             }
         }
 
@@ -18,16 +22,15 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     sh 'docker login -u $USERNAME -p $PASSWORD'
-                    sh 'docker tag flask-app dejourford/flask-app:latest'
-                    sh 'docker push dejourford/flask-app:latest'
+                    sh "docker push ${IMAGE_TAG}"
                 }
             }
         }
 
         stage('Deploy') {
-    steps {
-        sh 'kubectl apply -f flask-deployment.yaml --validate=false'
-    }
-}
+            steps {
+                sh "kubectl set image deployment/flask-deployment flask=${IMAGE_TAG} --validate=false"
+            }
+        }
     }
 }
