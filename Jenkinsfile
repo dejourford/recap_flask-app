@@ -26,7 +26,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'kubectl apply -f flask-deployment.yml'
+                sh 'kubectl apply -f flask-deployment.yaml'
             }
         }
     }
