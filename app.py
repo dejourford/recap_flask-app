@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Hello from Dockerized Flask App!'
+    return 'Hello from CI/CD Piple!@!!!'
 
 @app.route('/about')
 def about():
