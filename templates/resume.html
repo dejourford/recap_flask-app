@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De'Jour Ford - Resume</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #222;
+            background: #f4f6f9;
+            padding: 40px 20px;
+        }
+
+        .resume {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        /* HEADER */
+        .header { text-align: center; margin-bottom: 24px; }
+        .header h1 { font-size: 32px; color: #1F4E79; letter-spacing: 1px; }
+        .header .contact {
+            margin-top: 8px;
+            color: #555;
+            font-size: 13px;
+        }
+        .header .contact a { color: #2E75B6; text-decoration: none; }
+        .header .contact a:hover { text-decoration: underline; }
+
+        /* SECTION */
+        .section { margin-bottom: 28px; }
+        .section-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #1F4E79;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2E75B6;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+        }
+
+        /* SUMMARY */
+        .summary p { line-height: 1.6; color: #333; }
+
+        /* SKILLS */
+        .skills-grid { display: flex; flex-direction: column; gap: 6px; }
+        .skill-row { display: flex; gap: 8px; }
+        .skill-label { font-weight: bold; min-width: 200px; color: #1F4E79; }
+        .skill-value { color: #333; }
+
+        /* EXPERIENCE */
+        .job { margin-bottom: 20px; }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .job-title { font-weight: bold; font-size: 15px; color: #222; }
+        .job-dates { font-size: 12px; color: #666; }
+        .job-company { font-style: italic; color: #555; font-size: 13px; margin-bottom: 6px; }
+        .job ul { padding-left: 20px; }
+        .job ul li { margin-bottom: 4px; line-height: 1.5; color: #333; }
+
+        /* EDUCATION */
+        .edu-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+        .edu-degree { font-weight: bold; }
+        .edu-school { font-style: italic; color: #555; }
+        .certs { margin-top: 6px; color: #333; }
+
+        /* PROJECTS */
+        .project { margin-bottom: 12px; }
+        .project-title { font-weight: bold; color: #1F4E79; }
+        .project p { line-height: 1.5; color: #333; margin-top: 2px; }
+        .project a { color: #2E75B6; font-size: 12px; }
+    </style>
+</head>
+<body>
+<div class="resume">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>De'Jour Ford</h1>
+        <div class="contact">
+            619-897-6186 &nbsp;|&nbsp;
+            <a href="mailto:dejourford@yahoo.com">dejourford@yahoo.com</a> &nbsp;|&nbsp;
+            <a href="https://linkedin.com/in/dejourford" target="_blank">linkedin.com/in/dejourford</a> &nbsp;|&nbsp;
+            <a href="https://github.com/dejourford" target="_blank">github.com/dejourford</a>
+        </div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="section summary">
+        <div class="section-title">Professional Summary</div>
+        <p>IT professional with experience in identity and access management, enterprise systems support, and security operations. UNT alumnus with hands-on expertise in IAM workflows, technical documentation, SQL, and cross-functional collaboration. Proven ability to support complex application environments while maintaining security and compliance standards.</p>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+        <div class="section-title">Key Skills</div>
+        <div class="skills-grid">
+            <div class="skill-row">
+                <span class="skill-label">Security & IAM:</span>
+                <span class="skill-value">IAM, RBAC, SSO, SAML, OAuth, OpenID Connect, Active Directory, MFA, Least Privilege</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">Systems & Applications:</span>
+                <span class="skill-value">PeopleSoft, Canvas LMS, REST APIs, SQL, JSON, YAML, Git, CI/CD</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">Cloud & Infrastructure:</span>
+                <span class="skill-value">AWS, Microsoft Azure, Terraform, Docker, Linux, Windows Server</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">Scripting & Automation:</span>
+                <span class="skill-value">Python, Bash, PowerShell, Ansible</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">Monitoring & Security:</span>
+                <span class="skill-value">Microsoft Sentinel, Defender for Cloud, SIEM, Vulnerability Management, Incident Response</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+        <div class="section-title">Work Experience</div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Identity and Access Analyst</span>
+                <span class="job-dates">November 2025 – February 2026</span>
+            </div>
+            <div class="job-company">University of Texas at Arlington — Full Time</div>
+            <ul>
+                <li>Administered and automated user provisioning, deprovisioning, and role-based access controls (RBAC) across enterprise directory services, improving identity accuracy and strengthening least-privilege enforcement.</li>
+                <li>Integrated applications with enterprise authentication platforms and federation services (SSO, SAML, OAuth, OpenID Connect), streamlining secure access across enterprise systems.</li>
+                <li>Created and maintained SOPs, technical documentation, and knowledge base articles for IAM workflows, improving team onboarding speed and operational consistency.</li>
+                <li>Enforced security policy, access governance processes, and compliance frameworks aligned with least privilege and separation of duties principles.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Cloud & Cyber Security Support Technician Intern</span>
+                <span class="job-dates">July 2025 – September 2025</span>
+            </div>
+            <div class="job-company">Log(N) Pacific — Part Time</div>
+            <ul>
+                <li>Led vulnerability management and security operations initiatives, achieving up to 100% reduction in critical vulnerabilities and eliminating brute force incidents across Windows and Linux environments.</li>
+                <li>Configured Microsoft Sentinel, Entra ID, Defender for Cloud, and Azure Monitor to improve cloud visibility, monitoring, and incident detection.</li>
+                <li>Performed incident response aligned with NIST 800-61 and implemented Azure Regulatory Compliance controls based on NIST 800-53 standards.</li>
+                <li>Developed advanced KQL queries for dashboards, custom alerts, and proactive threat hunting within Microsoft Sentinel and Log Analytics Workspace.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Front End Software Engineer</span>
+                <span class="job-dates">March 2024 – July 2025</span>
+            </div>
+            <div class="job-company">Sally Beauty — Full Time</div>
+            <ul>
+                <li>Resolved 250+ urgent website issues including performance, access, and authorization errors using Jira; troubleshot API response failures and JSON formatting issues tied to data exchange.</li>
+                <li>Maintained internal documentation for security patches, ticket workflows, API endpoints, and QA processes, ensuring audit readiness.</li>
+                <li>Collaborated with cross-functional teams to design user experiences in an e-commerce environment, supporting integrations with Salesforce and third-party APIs.</li>
+                <li>Supported CI/CD deployment workflows through Git-based collaboration, managing code merges and maintaining stable production deployments.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+        <div class="section-title">Education & Certifications</div>
+        <div class="edu-row">
+            <span class="edu-degree">Bachelor of Science in Biology</span>
+            <span class="edu-school">University of North Texas</span>
+        </div>
+        <div class="certs">CompTIA Security+&nbsp;&nbsp;|&nbsp;&nbsp;Microsoft AZ-900</div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+        <div class="section-title">Projects</div>
+
+        <div class="project">
+            <div class="project-title">Vulnerable Web App Detection & Defense</div>
+            <p>Deployed OWASP Juice Shop on Azure with segmented dev/stage/prod environments, integrated Docker and Microsoft Sentinel, and hardened access with least privilege and alerting for incident detection.</p>
+            <a href="https://github.com/dejourford/azure_web_app" target="_blank">github.com/dejourford/azure_web_app</a>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Vulnerability Management</div>
+            <p>Simulated end-to-end vulnerability management in Azure using Nessus; reduced vulnerabilities by 86% (100% criticals, 90% highs) through automated PowerShell remediations.</p>
+            <a href="https://github.com/dejourford/vulnerability_management_program" target="_blank">github.com/dejourford/vulnerability_management_program</a>
+        </div>
+
+        <div class="project">
+            <div class="project-title">SIEM Honeypot with Microsoft Sentinel</div>
+            <p>Deployed a Windows 10 honeypot VM, integrated logs with Microsoft Sentinel, and built KQL detections and live attack heatmaps from 480K+ brute-force attempts mapped to MITRE ATT&CK.</p>
+            <a href="https://github.com/dejourford/siem_honeypot" target="_blank">github.com/dejourford/siem_honeypot</a>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Active Directory Lab</div>
+            <p>Built AD environment with DNS, DHCP, and Group Policy on Windows Server 2016; automated 1,000+ user creations with PowerShell and validated authentication and policy enforcement.</p>
+            <a href="https://github.com/dejourford/active_directory" target="_blank">github.com/dejourford/active_directory</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
